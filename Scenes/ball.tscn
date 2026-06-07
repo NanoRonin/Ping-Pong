@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://bo6xxo0dv8lr5"]
 
 [ext_resource type="Texture2D" uid="uid://b85k7d023k423" path="res://Assets/ball.png" id="1_d60mj"]
+[ext_resource type="Script" uid="uid://i5arp3i128q4" path="res://Scenes/ball.gd" id="1_ij5cq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d60mj"]
 radius = 25.0
 
 [node name="Ball" type="CharacterBody2D" unique_id=1199366616]
+motion_mode = 1
+script = ExtResource("1_ij5cq")
 
 [node name="Texture" type="Sprite2D" parent="." unique_id=486090967]
 position = Vector2(186, 96)

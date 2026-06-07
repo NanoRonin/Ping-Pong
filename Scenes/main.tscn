@@ -4,6 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://cm7auonslruaw" path="res://Scenes/enemy.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://bo6xxo0dv8lr5" path="res://Scenes/ball.tscn" id="3_8gbba"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gbba"]
+size = Vector2(1152, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjvhh"]
+size = Vector2(20, 648)
+
 [node name="Main" type="Node2D" unique_id=60483895]
 
 [node name="Player" parent="." unique_id=1688741592 instance=ExtResource("1_jjgbg")]
@@ -12,3 +18,27 @@
 
 [node name="Ball" parent="." unique_id=1199366616 instance=ExtResource("3_8gbba")]
 position = Vector2(123, 217)
+
+[node name="TopWall" type="StaticBody2D" parent="." unique_id=654084052]
+
+[node name="Collision" type="CollisionShape2D" parent="TopWall" unique_id=1416426942]
+position = Vector2(576, -10)
+shape = SubResource("RectangleShape2D_8gbba")
+
+[node name="BottomWall" type="StaticBody2D" parent="." unique_id=1187274355]
+
+[node name="Collision" type="CollisionShape2D" parent="BottomWall" unique_id=797819544]
+position = Vector2(576, 658)
+shape = SubResource("RectangleShape2D_8gbba")
+
+[node name="ScoreLeft" type="StaticBody2D" parent="." unique_id=535552986]
+
+[node name="Collision" type="CollisionShape2D" parent="ScoreLeft" unique_id=560677370]
+position = Vector2(-10, 324)
+shape = SubResource("RectangleShape2D_jjvhh")
+
+[node name="ScoreRight" type="StaticBody2D" parent="." unique_id=1327393959]
+
+[node name="Collision" type="CollisionShape2D" parent="ScoreRight" unique_id=1923252148]
+position = Vector2(1162, 324)
+shape = SubResource("RectangleShape2D_jjvhh")
