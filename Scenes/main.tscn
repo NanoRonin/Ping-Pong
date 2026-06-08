@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cx6r64ch8t5iy"]
 
 [ext_resource type="PackedScene" uid="uid://clyamv4i4ovnj" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://7k8r4shkqb54" path="res://Scenes/main.gd" id="1_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://cm7auonslruaw" path="res://Scenes/enemy.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://bo6xxo0dv8lr5" path="res://Scenes/ball.tscn" id="3_8gbba"]
 
@@ -11,6 +12,7 @@ size = Vector2(1152, 20)
 size = Vector2(20, 648)
 
 [node name="Main" type="Node2D" unique_id=60483895]
+script = ExtResource("1_jjvhh")
 
 [node name="Player" parent="." unique_id=1688741592 instance=ExtResource("1_jjgbg")]
 
